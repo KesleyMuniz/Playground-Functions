@@ -24,13 +24,15 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let resultado = array[array.length - 1] + ', ' + array[0];
+  let resultado = `${array[array.length - 1]}, ${array[0]}`;
   return resultado;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let resultado = wins * 3 + ties * 1;
+  return resultado;
 }
 
 // Desafio 6
