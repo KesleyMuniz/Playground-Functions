@@ -1,6 +1,15 @@
 // Desafio 1
-function compareTrue(a) {
+function compareTrue(win, win2) {
   // seu código aqui
+  let win = true;
+  let win2 = true;
+
+  if (win === true && win2 === true){
+    return true;
+  } else {
+    return false;
+  }
+
 }
 
 // Desafio 2
