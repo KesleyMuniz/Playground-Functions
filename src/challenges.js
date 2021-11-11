@@ -3,7 +3,7 @@ function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true) {
     return true;
-  } if (a === false || b === false) {
+  } if (a === false || b == false) {
     return false;
   }
 }
@@ -44,12 +44,22 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // seu código aqui 
+  // Math.abs() - Referencia citada em uma sala de estudos no dia 10/11 P.S. Tinha muita gente nao lembro exatamente quem citou
+  let distancia1 = Math.abs(cat1 - mouse)
+  let distancia2 = Math.abs(cat2 - mouse)
   
+   if (distancia1 > distancia2) {
+     return 'cat2';
+   } if (distancia2 > distancia1) {
+     return 'cat1';
+   } else {
+     return "os gatos trombam e o rato foge";
+    }
 }
 
-// Desafio 8
+// Desafio 8 
 function fizzBuzz() {
   // seu código aqui
 }
