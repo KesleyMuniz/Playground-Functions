@@ -83,11 +83,23 @@ return newArray;
 } 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(newstr) {
+  // seu código aqui // .replace() - Metodo indicado pelo Wellington[Tonn] - Turma XP - B
+  newstr = newstr.replace(/a/g, '1');
+  newstr = newstr.replace(/e/g, '2');
+  newstr = newstr.replace(/i/g, '3');
+  newstr = newstr.replace(/o/g, '4');
+  newstr = newstr.replace(/u/g, '5');       
+return newstr;
 }
-function decode() {
+function decode(newstr) {
   // seu código aqui
+  newstr = newstr.replace(/1/g, 'a');
+  newstr = newstr.replace(/2/g, 'e');
+  newstr = newstr.replace(/3/g, 'i');
+  newstr = newstr.replace(/4/g, 'o');
+  newstr = newstr.replace(/5/g, 'u');       
+return newstr;
 }
 
 module.exports = {
