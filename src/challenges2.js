@@ -19,24 +19,34 @@ function techList(tec, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  for (let i = 0; i < array.length; i += 1){
-      if (array.length !== 11){
-          return "Array com tamanho incorreto."
-      } for (let i in array.sort()){
-          if (array[i] < 0) {
-          return "não é possível gerar um número de telefone com esses valores"
-          } 
-      }
+  let zerado = array
+  if (zerado.length === 0){
+      return "Array com tamanho incorreto."
   }
+  for (let i = 0; i < array.length; i += 1){
+  if (array.length != 11){
+          return "Array com tamanho incorreto."
+// Nao pode ser menor que 0.
+      } for (let i in array ){
+          if (array[i] < 0) {
+              return "não é possível gerar um número de telefone com esses valores"
+          } 
+      } 
+  }
+// Não pode ser maior que 9.
   for (let i = 0; i < array.length; i += 1){
       if (array[i] > 9){
           return 'não é possível gerar um número de telefone com esses valores'
-
+// Não pode repetir 3 vezes.
       } else {
           let filtro = array.filter(repetidos => (repetidos) === array[i]) 
           if (filtro.length  > 2){
           return "não é possível gerar um número de telefone com esses valores"
   }}
+}
+
+if (array.length === []){
+  return "Array com tamanho incorreto."
 }
 // Numero correto
 let telefone = array;
