@@ -19,29 +19,25 @@ function techList(tec, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  let limitsize = array
-  if (limitsize.length === 0 || array.length != 11) {
-    return "Array com tamanho incorreto."
-  }
-  for (let i in array) {
+  let limitsize = array;
+  if (limitsize.length === 0 || array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } for (let i in array) {
     if (array[i] > 9 || array[i] < 0) {
-      return 'não é possível gerar um número de telefone com esses valores'
+      return 'não é possível gerar um número de telefone com esses valores';
     } else {
-      let strainer = array.filter(repet => (repet) === array[i])
+      let strainer = array.filter((repet) => repet === array[i]);
       if (strainer.length > 2) {
-        return "não é possível gerar um número de telefone com esses valores"
+        return 'não é possível gerar um número de telefone com esses valores';
       }
     }
   }
   let telefone = array;
-  let ddd = telefone.slice(0, 2).join('')
-  let fistnumber = telefone.slice(2, 7).join('')
-  let secondnumber = telefone.slice(7, 11).join('')
-  return array = `(${ddd}) ${fistnumber}-${secondnumber}`;
+  let ddd = telefone.slice(0, 2).join('');
+  let fistnumber = telefone.slice(2, 7).join('');
+  let secondnumber = telefone.slice(7, 11).join('');
+  return `(${ddd}) ${fistnumber}-${secondnumber}`;
 }
-
-
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
