@@ -48,8 +48,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(glasswater) {
   // seu código aqui
+  // Referencia: Number.parseInt = https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt
+  let total = 0;
+  let numberBeers = glasswater.replace(/[^0-9]/g, '');
+  for (let i = 0; i < numberBeers.length; i += 1) {
+    total += Number.parseInt(numberBeers[i]);
+  }
+  if (total > 1) {
+    return `${total} copos de água`;
+  } return `${total} copo de água`;
 }
 
 module.exports = {
