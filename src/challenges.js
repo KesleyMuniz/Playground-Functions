@@ -42,7 +42,8 @@ function highestCount(array) {
   if (maior < 0) {
     let filtro = array.filter((repetidos) => (repetidos) === maior)
     return filtro.length - 1;
-  } else { let filtro = array.filter((repetidos) => (repetidos) === maior);
+  } else {
+    let filtro = array.filter((repetidos) => (repetidos) === maior);
     return filtro.length;
   }
 }
