@@ -3,7 +3,7 @@ function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true) {
     return true;
-  } if (a === false || b == false) {
+  } if (a === false || b === false) {
     return false;
   }
 }
@@ -39,48 +39,46 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   // seu código aqui
   let maior = array.sort().reverse()[0];
-  if (maior < 0){
-  let filtro = array.filter(repetidos => (repetidos) === maior)
-  return filtro.length -1;
-  } else {
-      let filtro = array.filter(repetidos => (repetidos) === maior);
-      return filtro.length
+  if (maior < 0) {
+    let filtro = array.filter((repetidos) => (repetidos) === maior)
+    return filtro.length - 1;
+  } else { let filtro = array.filter((repetidos) => (repetidos) === maior);
+    return filtro.length;
   }
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui 
-  // Math.abs() - Referencia citada em uma sala de estudos no dia 10/11 P.S. Tinha muita gente nao lembro exatamente quem citou
-  let distancia1 = Math.abs(cat1 - mouse)
-  let distancia2 = Math.abs(cat2 - mouse)
-  
-   if (distancia1 > distancia2) {
-     return 'cat2';
-   } if (distancia2 > distancia1) {
-     return 'cat1';
-   } else {
-     return "os gatos trombam e o rato foge";
-    }
+  // seu código aqui // Math.abs() - Referencia citada em uma sala de estudos no dia 10/11 P.S. Tinha muita gente nao lembro exatamente quem citou
+  let distancia1 = Math.abs(cat1 - mouse);
+  let distancia2 = Math.abs(cat2 - mouse);
+
+  if (distancia1 > distancia2) {
+    return 'cat2';
+  } if (distancia2 > distancia1) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8 
 function fizzBuzz(array) {
   // seu código aqui
   let newArray = [];
-  for (let i = 0; i < array.length; i += 1){
-    if (array[i] % 3 == 0 && array[i] % 5 == 0){
-      newArray.push("fizzBuzz");
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      newArray.push('fizzBuzz');
     } else if (array[i] % 5 === 0) {
-      newArray.push("buzz");
+      newArray.push('buzz');
     } else if (array[i] % 3 === 0) {
-      newArray.push("fizz");
+      newArray.push('fizz');
     } else {
-    newArray.push("bug!");
+      newArray.push('bug!');
     }
   }
-return newArray;  
-} 
+  return newArray;
+}
 
 // Desafio 9
 function encode(newstr) {
@@ -89,8 +87,8 @@ function encode(newstr) {
   newstr = newstr.replace(/e/g, '2');
   newstr = newstr.replace(/i/g, '3');
   newstr = newstr.replace(/o/g, '4');
-  newstr = newstr.replace(/u/g, '5');       
-return newstr;
+  newstr = newstr.replace(/u/g, '5');
+  return newstr;
 }
 function decode(newstr) {
   // seu código aqui
@@ -98,8 +96,8 @@ function decode(newstr) {
   newstr = newstr.replace(/2/g, 'e');
   newstr = newstr.replace(/3/g, 'i');
   newstr = newstr.replace(/4/g, 'o');
-  newstr = newstr.replace(/5/g, 'u');       
-return newstr;
+  newstr = newstr.replace(/5/g, 'u');
+  return newstr;
 }
 
 module.exports = {
