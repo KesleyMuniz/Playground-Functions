@@ -40,12 +40,11 @@ function highestCount(array) {
   // seu código aqui
   let maior = array.sort().reverse()[0];
   if (maior < 0) {
-    let filtro = array.filter((repetidos) => (repetidos) === maior)
-    return filtro.length - 1;
-  } else {
     let filtro = array.filter((repetidos) => (repetidos) === maior);
-    return filtro.length;
+    return filtro.length - 1;
   }
+  let filtro = array.filter((repetidos) => (repetidos) === maior);
+  return filtro.length;
 }
 
 // Desafio 7
@@ -58,12 +57,11 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } if (distancia2 > distancia1) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
-// Desafio 8 
+// Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
   let newArray = [];

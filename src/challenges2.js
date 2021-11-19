@@ -7,9 +7,9 @@ function techList(tec, name) {
   if (ordenado.length === 0) {
     return 'Vazio!';
   }
-  for (let i in ordenado) {
+  for (let i of ordenado) {
     tecnologias.push({
-      tech: ordenado[i],
+      tech: i,
       name,
     });
   }
@@ -21,14 +21,13 @@ function generatePhoneNumber(array) {
   // seu código aqui
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } for (let i in array) {
+  } for (let i of array) {
     if (array[i] > 9 || array[i] < 0) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      let strainer = array.filter((repet) => repet === array[i]);
-      if (strainer.length > 2) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+    }
+    let strainer = array.filter((repet) => repet === array[i]);
+    if (strainer.length > 2) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   let telefone = array;
@@ -37,6 +36,7 @@ function generatePhoneNumber(array) {
   let secondnumber = telefone.slice(7, 11).join('');
   return `(${ddd}) ${fistnumber}-${secondnumber}`;
 }
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
