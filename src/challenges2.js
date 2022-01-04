@@ -21,7 +21,8 @@ function generatePhoneNumber(array) {
   // seu código aqui
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } for (let i of array) {
+  }
+for (let i of array) {
     if (array[i] > 9 || array[i] < 0) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
@@ -30,12 +31,10 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let telefone = array;
-  let ddd = telefone.slice(0, 2).join('');
-  let fistnumber = telefone.slice(2, 7).join('');
-  let secondnumber = telefone.slice(7, 11).join('');
-  return `(${ddd}) ${fistnumber}-${secondnumber}`;
+  return Numero(array);
 }
+
+
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {

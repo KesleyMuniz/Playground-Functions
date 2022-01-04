@@ -62,23 +62,29 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
+function fizBuzzLimit(array) {
   // seu código aqui
+
+  if (array % 3 === 0 && array % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (array % 5 === 0) {
+    return 'buzz';
+  }
+  if (array % 3 === 0) {
+    return 'fizz';
+  }
+  return 'bug!';
+}
+
+function fizzBuzz(cont) {
   let newArray = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      newArray.push('fizzBuzz');
-    } else if (array[i] % 5 === 0) {
-      newArray.push('buzz');
-    } else if (array[i] % 3 === 0) {
-      newArray.push('fizz');
-    } else {
-      newArray.push('bug!');
-    }
+
+  for (let array of cont) {
+    newArray.push(fizBuzzLimit(array));
   }
   return newArray;
 }
-
 // Desafio 9
 function encode(newstr) {
   // seu código aqui // .replace() - Metodo indicado pelo Wellington[Tonn] - Turma XP - B
